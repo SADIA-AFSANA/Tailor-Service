@@ -1,13 +1,27 @@
-import React from 'react';
+import { Result } from 'postcss';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
 
+    const { login } = useContext(AuthContext);
 
     useTitle('Login')
     const handleLogin = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        login(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+            })
+            .then(error => console.log(error));
 
     }
 
