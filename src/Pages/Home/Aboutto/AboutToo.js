@@ -3,9 +3,10 @@ import React from 'react';
 const AboutToo = () => {
     return (
 
-        <div className='my-10'>
+        <div className='my-10 bg-emerald-200'>
             <div>
-
+                <h2 className='text-red-400 text-2xl text-center my-2'>Different types of cloth </h2>
+                <p className='text-center my-2'>A tailor is a person who makes or alters clothing, particularly in men's clothing.</p>
             </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
@@ -17,7 +18,7 @@ const AboutToo = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
-                            <th></th>
+                            <th>Items</th>
                             <th>Name</th>
                             <th> Color</th>
                             <th>Details</th>
