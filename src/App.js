@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div >
+    <div data-theme="cupcake">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
