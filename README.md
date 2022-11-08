@@ -14,7 +14,18 @@ In the project directory, you can run:
 
 
 
-### `npm run build`
+### use Link 
+
+https://console.firebase.google.com/
+
+https://reactrouter.com/en/main
+
+https://tailwindcss.com/docs/guides/create-react-app
+
+https://daisyui.com/
+
+https://create-react-app.dev/docs/adding-custom-environment-variables/
+
 
 
 
