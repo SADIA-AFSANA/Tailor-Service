@@ -2,9 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Website Name:  Tailor-Servise
 
-In the project directory, you can run:
+Tailor-Servise
+
+
 
 ### `npm start`
 
@@ -29,26 +31,5 @@ https://create-react-app.dev/docs/adding-custom-environment-variables/
 
 
 
-### `npm run eject`
 
-
-## Learn More
-
-
-### Code Splitting
-
-
-### Analyzing the Bundle Size
-
-
-
-### Making a Progressive Web App
-
-
-
-### Advanced Configuration
-
-
-
-### Deployment
 

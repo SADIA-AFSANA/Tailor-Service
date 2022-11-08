@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
 
+
+    useTitle('Login')
     const handleLogin = event => {
         event.preventDefault();
+
     }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200 w-full">
