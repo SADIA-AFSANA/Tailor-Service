@@ -24,6 +24,25 @@ const Review = () => {
             review,
 
         }
+
+        fetch('http://localhost:5000/review', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(reviewDb)
+        }
+
+        )
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    alert('review done')
+                    form.reset()
+                }
+            })
+            .catch(er => console.error(er));
     }
 
 
@@ -33,7 +52,7 @@ const Review = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-5'>
                 <input name="name" type="text" placeholder="Your name" className="input input-ghost input-bordered w-full max-w-xs" />
-                <input name=" phone" type="text" placeholder="Your phone" className="input input-ghost input-bordered w-full max-w-xs" />
+                <input name="phone" type="text" placeholder="Your phone" className="input input-ghost input-bordered w-full max-w-xs" />
                 <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input input-ghost input-bordered w-full max-w-xs" readOnly />
 
             </div>
