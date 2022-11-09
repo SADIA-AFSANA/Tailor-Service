@@ -40,9 +40,10 @@ const Login = () => {
                     .then(data => {
                         console.log(data);
                         localStorage.setItem('token', data.token);
-                    })
+                        navigate(from, { replace: true })
+                    });
 
-                // navigate(from, { replace: true })
+
 
 
             })

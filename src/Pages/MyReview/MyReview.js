@@ -3,16 +3,28 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import MyReviewRow from './MyReviewRow';
 
 const MyReview = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([])
 
     // const url = `http://localhost:5000/myReview?email=${user.email}`;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReview?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [user.email])
+        fetch(`http://localhost:5000/myReview?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    logOut()
+                }
+                return res.json()
+            })
+            .then(data => {
+                // console.log('received', data)
+                setOrders(data)
+            })
+    }, [user?.email])
 
     const handleDelete = id => {
         const proceed = window.confirm('you want to delete this review');
