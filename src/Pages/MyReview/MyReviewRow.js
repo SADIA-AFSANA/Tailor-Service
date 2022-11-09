@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const MyReviewRow = ({ review, handleDelete, handleStatusUpdate }) => {
     const { _id, serviceName, price, service, customer, phone, status } = review;
@@ -10,7 +11,7 @@ const MyReviewRow = ({ review, handleDelete, handleStatusUpdate }) => {
             .then(data => setReviewService(data));
     }, [service])
 
-
+    useTitle('Myreview')
 
     return (
 

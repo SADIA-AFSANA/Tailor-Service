@@ -30,7 +30,9 @@ const MyReview = () => {
         const proceed = window.confirm('you want to delete this review');
         if (proceed) {
             fetch(`http://localhost:5000/review/${id}`, {
-                method: 'DELETE'
+                method: 'DELETE', headers: {
+                    authorization: `Bearer ${localStorage.getItem('token')}`
+                }
             })
                 .then(res => res.json())
                 .then(data => {
@@ -48,7 +50,8 @@ const MyReview = () => {
         fetch(`http://localhost:5000/review/${id}`, {
             method: 'PATCH',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify({ status: 'Approved' })
         })

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../../hooks/useTitle';
 import ServiceCard from '../../../shared/ServiceCard/ServiceCard';
 
 const Services = ({ limit }) => {
     const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    useTitle('Service')
+
     useEffect(() => {
         setLoading(true)
         fetch(`http://localhost:5000/services${limit ? `?limit=${limit}` : ""}`)
