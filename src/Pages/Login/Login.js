@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import SocialLogin from '../shared/SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -33,7 +34,7 @@ const Login = () => {
                         <img src="tailorbanner.jpeg" alt="" />
                         <p className="py-6 text-2xl font-semibold text-orange-500">Login credentials authenticate a user when logging into an online account over the Internet.</p>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-4">
                         <h1 className="text-5xl text-center font-bold text-orange-500 my-5">Login now!</h1>
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
@@ -57,6 +58,7 @@ const Login = () => {
                             </div>
                         </form>
                         <p className='mb-10 text-center'>New to service <Link className='text-orange-400 font-bold' to="/signup">Sign Up</Link></p>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
