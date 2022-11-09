@@ -11,7 +11,7 @@ const Header = () => {
                 <Link to="/" className="btn btn-ghost normal-case text-xl">Tailor-Service</Link>
                 <div className='header '>
                     <Link to='/home'>Home</Link>
-                    {/* <Link to='/services'>Services</Link> */}
+                    <Link to='/services'>Services</Link>
                     <Link to='/blog'>Blogs</Link>
                     <Link to='/login'>Login</Link>
                     {/* <Link to='/signup'>Sign up</Link> */}
