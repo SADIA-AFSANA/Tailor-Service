@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div>
 
@@ -13,8 +15,17 @@ const Header = () => {
                     <Link to='/home'>Home</Link>
                     <Link to='/services'>Services</Link>
                     <Link to='/blog'>Blogs</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/myReview'>myReview</Link>
+
+                    {/* <Link to='/myReview'>myReview</Link> */}
+
+                    {
+                        user?.email ?
+                            <>
+                                <Link to='/myReview'>myReview</Link>
+                            </>
+                            :
+                            <Link to='/login'>Login</Link>}
+
                     {/* <Link to='/signup'>Sign up</Link> */}
                 </div>
             </div>
