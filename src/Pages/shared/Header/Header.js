@@ -4,7 +4,14 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch();
+    }
+
     return (
         <div>
 
@@ -22,6 +29,7 @@ const Header = () => {
                         user?.email ?
                             <>
                                 <Link to='/myReview'>myReview</Link>
+                                <button onClick={handleLogOut} className='btn btn-ghost'>SignOut</button>
                             </>
                             :
                             <Link to='/login'>Login</Link>}
