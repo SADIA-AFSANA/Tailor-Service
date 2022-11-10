@@ -8,11 +8,11 @@ Tailor-Servise
 
 
 
-### `npm start`
+### https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-SADIA-AFSANA
 
 
 
-### `npm test`
+### https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-SADIA-AFSANA
 
 
 
