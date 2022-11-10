@@ -20,7 +20,7 @@ const Services = ({ limit }) => {
             })
     }, [limit]);
     if (loading) {
-        return <Loading></Loading>
+        return <h1>loading...</h1>
     }
     return (
         <div>
