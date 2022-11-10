@@ -10,12 +10,12 @@ const Home = () => {
     useTitle('Home')
     const navigate = useNavigate()
     return (
-        <div>
+        <div className='bg-pink-100'>
             <Banner></Banner>
             <About></About>
             <AboutToo></AboutToo>
             <Services limit={3}></Services>
-            <button onClick={() => navigate('/services')} className="btn btn-success px-10 mt-3 mx-auto"> See All </button>
+            <button onClick={() => navigate('/services')} className="btn btn-success px-10 mt-3 mx-auto flex justify-center"> See All </button>
         </div>
     );
 };

@@ -70,7 +70,7 @@ const MyReview = () => {
 
     return (
         <div>
-
+            <h2 className='text-2xl text-orange-500'> You have {orders.length} review</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
 

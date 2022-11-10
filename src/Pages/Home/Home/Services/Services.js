@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useTitle from '../../../../hooks/useTitle';
+import Loading from '../../../shared/Loading/Loading';
 import ServiceCard from '../../../shared/ServiceCard/ServiceCard';
 
 const Services = ({ limit }) => {
@@ -13,11 +14,13 @@ const Services = ({ limit }) => {
         fetch(`http://localhost:5000/services${limit ? `?limit=${limit}` : ""}`)
 
             .then(res => res.json())
-            .then(data => setServices(data))
-        setLoading(false)
-    }, [limit])
+            .then(data => {
+                setServices(data)
+                setLoading(false)
+            })
+    }, [limit]);
     if (loading) {
-        return 'hi'
+        return <Loading></Loading>
     }
     return (
         <div>
