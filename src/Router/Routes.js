@@ -42,12 +42,12 @@ const router = createBrowserRouter([
             {
                 path: '/serviceDetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://tailor-service-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/review/:id',
                 element: <PrivateRoute><Review></Review></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://tailor-service-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myReview',

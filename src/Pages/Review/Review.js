@@ -25,7 +25,7 @@ const Review = () => {
 
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://tailor-service-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -11,7 +11,7 @@ const Services = ({ limit }) => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/services${limit ? `?limit=${limit}` : ""}`)
+        fetch(`https://tailor-service-server.vercel.app/services${limit ? `?limit=${limit}` : ""}`)
 
             .then(res => res.json())
             .then(data => {

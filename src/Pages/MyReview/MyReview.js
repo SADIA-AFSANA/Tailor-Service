@@ -6,10 +6,10 @@ const MyReview = () => {
     const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([])
 
-    // const url = `http://localhost:5000/myReview?email=${user.email}`;
+    // const url = `https://tailor-service-server.vercel.app/myReview?email=${user.email}`;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReview?email=${user?.email}`, {
+        fetch(`https://tailor-service-server.vercel.app/myReview?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -29,7 +29,7 @@ const MyReview = () => {
     const handleDelete = id => {
         const proceed = window.confirm('you want to delete this review');
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://tailor-service-server.vercel.app/review/${id}`, {
                 method: 'DELETE', headers: {
                     authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -47,7 +47,7 @@ const MyReview = () => {
     }
 
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/review/${id}`, {
+        fetch(`https://tailor-service-server.vercel.app/review/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
