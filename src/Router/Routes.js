@@ -46,12 +46,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/review/:id',
-                element: <PrivateRoute><Review></Review></PrivateRoute>,
+                element: <Review></Review>,
                 loader: ({ params }) => fetch(`https://tailor-service-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myReview',
-                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+                element: <MyReview></MyReview>
             },
             {
                 path: '*',

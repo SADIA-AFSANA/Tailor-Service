@@ -8,11 +8,12 @@ Tailor-Servise
 
 
 
-### https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-SADIA-AFSANA
+### https://github.com/SADIA-AFSANA/Tailor-Service
 
 
 
-### https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-SADIA-AFSANA
+
+### https://github.com/SADIA-AFSANA/Tailor-Service-server
 
 
 
